@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hmttest</title>
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.load{
+  width: 100%;
+  height: 100vh;
+  background: #191919;
+  position: absolute;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+ transition: 0.5s;
+ opacity: 1;
+}
+.load span{
+  color: crimson;
+}
+.load h2{
+  color:#fff;
+  font-family: cursive;
+  font-weight: 400;
+}
+.showconsole{
+    display: flex;
+}
+.begin{
+    transition: 0.6s;
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px #333;
+    margin: 35px auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #19191A;
+}
+.begin h3,p{
+    transition: 0.5s;
+    margin: 3px;
+    padding: 13px;
+    font-weight: 500;
+    border-radius: 11px;
+    color:#fff;
+}
+.begin a{
+  text-decoration: none;
+}
+.begin h3{
+    font-size: 23px;
+}
+.begin h3:first-child{
+    text-align: center;
+}
+.begin p:hover{
+
+    background: #555;
+    cursor: pointer;
+}
+#start{
+    width: 95%;
+    margin: 15px auto;
+    border: 1px solid lightgreen;
+    background: lightgreen;
+    padding: 13px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+.test{
+    width: 0%;
+    margin: 50px auto;
+    
+    border: 2px solid #333;
+    transition: 0.5s;
+    display:none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #333;
+}
+
+#javob,#tugatish{
+    margin-top: 45px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 45px;
+    border:none;
+    border-radius: 10px;
+    font-size: 16.5px;
+    background-color: lightgreen;
+
+}
+#tugatish{
+    margin-left: 20px;
+}
+.time{
+    padding: 10px;
+    font-weight: 500;
+}
+.savollar{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.box{
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+}
+.box10 h3{
+ text-align: center;
+}
+
+
+.box h4{
+    padding: 18px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    margin:15px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+.box h4:hover{
+  cursor: pointer;
+}
+.box h2{
+    background-color: lightgreen;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 3px;
+   
+}
+.buttonr{
+    width: 150px;
+    height: 45px;
+    border:none;
+    border-radius: 10px;
+    font-size: 16.5px;
+    background-color: lightgreen;
+    margin:10px;
+}
+#variant1{
+    margin: 30px 10px 10px 10px;
+}
+
+#start:hover{
+    cursor: pointer;
+}
+.about{
+color: yellow;
+padding: 1px 15px;
+font-size: 15px;
+}
+
+@media (max-width:800px){
+    .begin{
+        width:90%;
+    }
+    .test{
+        width:90%;
+    }
+    #javob,#tugatish{
+        margin-top: 10px;
+    }
+    
+}
+
+
+    </style>
+
+</head>
+<body onload="loading()">
+
+  <div class="load">
+    <h2> <span> HMT</span> team's product</h2>
+  </div>
+
+   <div class="showconsole">
+    <div class="test">
+         <h2 class="time">Time: <span></span> </h2>        
+        <div class="savollar">
+
+        <div class="box1 box">
+            <h2> <span>1</span> -savol Html bu: </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) hyper text markup language</h4>
+            <h4 class="variant2" onclick="vt2()">B) dasturlash tili </h4>
+            <h4 class="variant3" onclick="vt3()">C) Home tool markup language</h4>
+        </div>
+        <div class="box2 box">
+            <h2> <span>2</span> -savol Html da &lt;title&gt; tegining vazifasi </h2>
+            
+            <h4 class="variant1 " id="variant1" onclick="vt1()">A) sarlavha qo`yish</h4>
+            <h4 class="variant2" onclick="vt2()">B) yozuv rangi o`zgartirish </h4>
+            <h4 class="variant3" onclick="vt3()">C) orqa fon rangini o`zgartirish</h4>
+        
+        </div>
+        <div class="box3 box">
+            <h2> <span>3</span> -savol qo`shimcha qator qo`shuvchi teg: </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;br&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) &lt;hr&gt; </h4>
+            <h4 class="variant3" onclick="vt3()" >C) &lt;dr&gt;</h4>
+
+        </div>
+        <div class="box4 box">
+            <h2> <span>4</span> -yozuvni qalin qilib chiqaruvchi teg: </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;strong&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) &lt;italic&gt; </h4>
+            <h4 class="variant3" onclick="vt3()" >C) &lt;em&gt;</h4>
+        </div>
+        <div class="box5 box">
+            <h2> <span>5</span> -savol htmlda link qaysi teg yordamida beriladi </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;a&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) &lt;link&gt; </h4>
+            <h4 class="variant3" onclick="vt3()" >C) &lt;li&gt;</h4>
+        </div>
+        <div class="box6 box">
+            <h2> <span>6</span> -savol  htmlda to'gri berilgan comentariyani toping: </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;!-- --&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) // </h4>
+            <h4 class="variant3" onclick="vt3()" >C) /**/</h4>
+        </div>
+        <div class="box7 box">
+            <h2> <span>7</span> -savol browserda urlni qanday qilib yangi oynada ochamiz: </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;a href="url" target="_blank"&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) &lt;a href="url" target="new"&gt; </h4>
+            <h4 class="variant3" onclick="vt3()" >C) &lt;a href="url" new&gt;</h4>
+        </div>
+        <div class="box8 box">
+            <h2> <span>8</span> -savol qaysi teg yordamida list hosil qilamiz : </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;ul&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) &lt;list&gt; </h4>
+            <h4 class="variant3" onclick="vt3()" >C) &lt;dl&gt;</h4>
+        </div>
+        <div class="box9 box">
+            <h2> <span>9</span> -savol htmlda qanday qilib checkbox hosil qilamiz?: </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;input type="checkbox"&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) &lt;checkbox>&gt; </h4>
+            <h4 class="variant3" onclick="vt3()" >C) &lt;check&gt;</h4>
+        </div>
+        <div class="box10 box">
+            <h2> <span>10</span> -savol htmlda qanday qilib colorpicker hosil qilamiz : </h2>
+            <h4 class="variant1" id="variant1" onclick="vt1()">A) &lt;input type="color"&gt;</h4>
+            <h4 class="variant2" onclick="vt2()"> B) &lt;color&gt; </h4>
+            <h4 class="variant3" onclick="vt3()" >C) &lt;colorp&gt;</h4>
+        </div>
+        <div class="box10 box">
+          <h3>Test yakunlandi natijangiz:</h3>
+          <h4 id="natija"></h4>
+          <button class="buttonr" onclick="ss()"> qayta topshirish</button>
+        </div>
+
+    </div>
+    
+    <button id="javob" onclick="javob()">Javob berish</button>
+    <button id="tugatish" onclick="tugatish()">Yakunlash</button>
+
+    </div>
+ 
+       <div class="begin">
+          <a href="https://devhmt.netlify.app/"> <h3 class="b_h3" title="Biz haqimizda" onclick="open()"> Salom Testga xush kelibsiz  </h3></a>
+           <p class="about" onclick="show()" >Test haqida</p>
+           <h3>Marhamat fon rangini belgilang</h3>
+           <p class="b_p1">Dark</p>
+           <p class="b_p1">Light</p>
+           
+           <h3 class="vaqt">Test vaqtini belgilang</h3>
+           <p class="b_vaqt1">2 daqiqa</p>
+           <p class="b_vaqt1">3 daqiqa</p>
+           <p class="b_vaqt1">5 daqiqa</p>
+          <button id="start" onclick="starttest()"> Boshlash</button>
+       </div>
+   </div> 
+<script>
+
+var loadh=document.querySelector(".load");
+
+function loading(){
+ 
+  setTimeout(() => {
+  
+    loadh.style.opacity="0";
+ 
+}, 1500);
+
+setTimeout(() => {
+  
+  loadh.style.display="none";
+  
+}, 1900);
+}
+
+function show(){
+  alert("Salom bu dasturda siz bir qancha qiziqarli savollarga javob berib bilimingizni sinab ko`rishingiz mumkin" );
+}
+
+
+var b1=document.querySelectorAll(".b_p1");
+var b2=document.querySelectorAll(".b_vaqt1");
+var tanlov1=1;
+var tanlov2=3;
+var sekund=60;
+
+var natija=0;
+var savolsoni=1;
+var tanlangan=0;
+
+
+/////////////////////////////////////////
+var box=document.querySelectorAll(".box");
+var variant1=document.querySelectorAll(".variant1");
+var variant2=document.querySelectorAll(".variant2");
+var variant3=document.querySelectorAll(".variant3");
+
+
+function vt1()
+{
+  console.log("kirildi variant 1 "+savolsoni);
+  variant1[savolsoni-1].style.border="1px solid orange";
+  variant2[savolsoni-1].style.border="1px solid transparent";
+  variant3[savolsoni-1].style.border="1px solid transparent";
+  tanlangan=1;
+}
+function vt2()
+{
+  variant2[savolsoni-1].style.border="1px solid orange";
+  variant1[savolsoni-1].style.border="1px solid transparent";
+  variant3[savolsoni-1].style.border="1px solid transparent";
+  tanlangan=2;
+}
+
+function vt3()
+{
+  variant3[savolsoni-1].style.border="1px solid orange";
+  variant1[savolsoni-1].style.border="1px solid transparent";
+  variant2[savolsoni-1].style.border="1px solid transparent";
+  tanlangan=3;
+}
+
+
+///////////////////
+b1[0].onclick=function(){
+    b1[0].style.background="#555";
+    b1[1].style.background="none";
+    tanlov1=1;
+}
+b1[1].onclick=function(){
+    b1[1].style.background="#555";
+    b1[0].style.background="none";
+    tanlov1=2;
+    
+}
+
+function rang(){
+   if(tanlov1==1){
+      document.querySelector(".test").style.background="#333";
+      document.querySelector("body").style.color="#fff";
+      
+      
+   } else{
+    document.querySelector(".test").style.background="#fff";
+    document.querySelector("body").style.color="#333";
+    
+   }
+}
+
+
+///////////////////
+b2[0].onclick=function(){
+    b2[0].style.background="#555";
+    b2[1].style.background="none";
+    b2[2].style.background="none";
+    tanlov2=1;
+}
+b2[1].onclick=function(){
+    b2[1].style.background="#555";
+    b2[0].style.background="none";
+    b2[2].style.background="none";
+    tanlov2=2;
+}
+b2[2].onclick=function(){
+    b2[2].style.background="#555";
+    b2[1].style.background="none";
+    b2[0].style.background="none";
+    tanlov2=4;
+
+}
+
+////////////////
+
+function javob()
+{
+  /////////////
+  switch (savolsoni) {
+      case 1:
+      if(tanlangan==1){
+        natija++;
+      } 
+      break;
+      case 2:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 3:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 4:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 5:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 6:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 7:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 8:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 9:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+      case 10:
+        if(tanlangan==1){
+          natija++;
+        }
+      break;
+
+  
+    default:
+      break;
+  }
+  /////////////
+
+  if(savolsoni > 9){
+    box[savolsoni-1].style.width="0";
+    box[savolsoni-1].style.display="none";
+    document.querySelector("#natija").innerHTML=(natija*10)+" ball";
+    
+    ///// qo`shimcha
+    document.querySelector(".time span").style.visibility="hidden";
+    document.querySelector("#javob").style.visibility="hidden";
+    document.querySelector("#tugatish").style.visibility="hidden";
+    /////
+    
+  
+  }else{
+  box[savolsoni-1].style.width="0";
+  box[savolsoni-1].style.display="none";
+    
+  savolsoni+=1;
+  console.log(savolsoni);
+  }
+  tanlangan=0;
+}
+///////////////
+function tugatish()
+{
+for(var i=0;i<10;i++)
+{
+box[i].style.width="0";
+box[i].style.display="none";
+document.querySelector("#natija").innerHTML=(natija*10)+" ball";
+
+document.querySelector(".time span").style.visibility="hidden";
+document.querySelector("#javob").style.visibility="hidden";
+document.querySelector("#tugatish").style.visibility="hidden";
+
+}
+}
+//////////////////
+
+function timer(){
+  if(tanlov2 >= 0){
+    sekund--;
+  }
+  if(sekund==0){
+   tanlov2--;
+   sekund=59;
+  }
+  
+   if(tanlov2 >=0){
+    document.querySelector(".time span").innerHTML= tanlov2+" : "+sekund;
+    setTimeout("timer()",1000);
+  }else{
+    tugatish();
+    document.querySelector(".time span").innerHTML= "vaqt tugadi";
+      
+  }
+
+}
+
+var width=document.querySelector("body").clientWidth;
+console.log(width);
+function starttest(){
+document.querySelector(".begin").style.transform="Scale(0)";
+setTimeout(() => {  document.querySelector(".begin").style.display="none"; }, 500);
+setTimeout(() => {  document.querySelector(".test").style.display="block"; }, 1000);
+if(width > 800){
+setTimeout(() => {  document.querySelector(".test").style.width="65%"; }, 1100);
+}else{
+    setTimeout(() => {  document.querySelector(".test").style.width="90%"; }, 1100);
+}
+setTimeout(() => {timer()},1150);   
+rang();
+
+}
+
+function ss(){
+  location.reload();
+}
+
+</script>
+</body>
+</html>
