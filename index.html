@@ -160,8 +160,17 @@ color: yellow;
 padding: 1px 15px;
 font-size: 15px;
 }
-
+.begin h3{
+  border-radius: 0;
+}
+.bh3{
+  border-bottom:0.5px solid wheat;
+}
 @media (max-width:800px){
+  .begin h3{
+    font-size: 21px;
+    line-height: 30px;
+  }
     .begin{
         width:90%;
     }
@@ -268,11 +277,11 @@ font-size: 15px;
        <div class="begin">
           <a href="https://devhmt.netlify.app/"> <h3 class="b_h3" title="Biz haqimizda" onclick="open()"> Salom Testga xush kelibsiz  </h3></a>
            <p class="about" onclick="show()" >Test haqida</p>
-           <h3>Marhamat fon rangini belgilang</h3>
+           <h3 class="bh3">Marhamat fon rangini belgilang</h3>
            <p class="b_p1">Dark</p>
            <p class="b_p1">Light</p>
            
-           <h3 class="vaqt">Test vaqtini belgilang</h3>
+           <h3 class="vaqt bh3"  >Test vaqtini belgilang</h3>
            <p class="b_vaqt1">2 daqiqa</p>
            <p class="b_vaqt1">3 daqiqa</p>
            <p class="b_vaqt1">5 daqiqa</p>
